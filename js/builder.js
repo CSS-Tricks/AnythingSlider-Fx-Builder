@@ -1,5 +1,5 @@
 ﻿/*
- * AnythingSlider FX Builder 1.0.1 beta
+ * AnythingSlider FX Builder 1.0.2 beta
  * By Rob Garrison (aka Mottie & Fudgey)
  * Dual licensed under the MIT and GPL licenses.
  */
@@ -17,19 +17,18 @@ function setupFxBuilder(){
 			.attr({
 				rel : "stylesheet",
 				type: "text/css",
-				// local: "file:///C:/Temp/AnythingSlider-Fx-Builder/css/builder.css"
 				href: "http://mottie.github.com/AnythingSlider-Fx-Builder/css/builder.css"
 			});
 		}
 
-		// load easing function if needed - local: "file:///C:/Temp/AnythingSlider/js/jquery.easing.1.2.js");
+		// load easing function if needed
 		var e = typeof jQuery.easing;
 		if (e === 'undefined' || (e === 'object' && typeof jQuery.easing.easeInQuad === 'undefined')) {
 			jQuery.getScript("http://proloser.github.com/AnythingSlider/js/jquery.easing.1.2.js");
 		}
 
 		if (typeof jQuery.fn.anythingSliderFx !== 'function'){
-			// load fx extension - local: file:///C:/Temp/AnythingSlider/js/jquery.anythingslider.fx.js
+			// load fx extension
 			jQuery.getScript("http://proloser.github.com/AnythingSlider/js/jquery.anythingslider.fx.js", function(){
 				anythingSliderFxBuilder();
 			});
@@ -95,7 +94,12 @@ function anythingSliderFxBuilder(){
 		}
 	}
 	popup = '<div id="as-fxb-builder">' +
-	'<h2>AnythingSlider FX Builder<span class="close"></span></h2>' +
+	'<!--[if lte IE 7]><style type="text/css" media="screen">#as-fxb-builder{width:780px;}#as-fxb-builder h2 span.close,#as-fxb-builder h2 a{top:-20px;}</style><![endif]-->' +
+	'<h2>' +
+		'AnythingSlider FX Builder ' +
+		'<span class="close"></span>' +
+		'<a class="asfxbuildertooltip" target="_blank" title="Need Help? Click me!" href="https://github.com/Mottie/AnythingSlider-Fx-Builder"></a>' +
+	'</h2>' +
 	'<div id="as-fxb-selections">' +
 		'<table>' +
 			'<thead>' +
@@ -226,7 +230,6 @@ function anythingSliderFxBuilder(){
 	selections = jQuery('#as-fxb-selections');
 	panels = slider.children('li'); // panel class added by the plugin, but add here just in case
 	dat = slider.data('AnythingSlider');
-
 	panels.filter(':not(.cloned)').find('*').each(function(i){
 		that = jQuery(this);
 		// get panel index or class
@@ -246,17 +249,19 @@ function anythingSliderFxBuilder(){
 			t = '.' + jQuery.trim( (' ' + tag.attr('class') + ' ').replace('panel ','').replace('activePage','') ); // hoping only one class name is added
 		}
 		tag = this.tagName.toLowerCase();
+		// tags to ignore - /embed for ie7 (http://bugs.jquery.com/ticket/10047) & HTML5 tags (http://bugs.jquery.com/ticket/10048)
+		if (tag.match('area|br|param|source|style|script|colgroup|option') || /^\//.test(tag)) { return; }
 		// get id or class
 		tar = (this.id) ? '#' + this.id : (that.attr('class')) ? '.' + that.attr('class') : '';
 		if (tar === '') {
 			// find content/attribute to differentiate the element
-			if (tag.match('table|thead|tbody|tfoot|tr|ul|br|hr|area|map|embed|object|param|canvas|audio|video|img|iframe')){
+			if (tag.match('table|thead|tbody|tfoot|tr|ul|hr|map|embed|object|canvas|audio|video|img|iframe')){
 				content = '';
 			} else {
 				content = jQuery.trim( that.text() );
 			}
 			// show img/iframe src
-			if (tag.match('img|iframe')) {
+			if (tag.match('img|iframe|embed')) {
 				s = that.attr('src');
 				content = s.substring( s.lastIndexOf('/') + 1, s.length);
 			}

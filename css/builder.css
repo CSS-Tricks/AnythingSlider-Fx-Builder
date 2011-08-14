@@ -22,12 +22,13 @@
 #as-fxb-builder { font: bold 14px Helvetica,Sans-Serif; border: #333 1px solid; background: #fff; color: #000; border-radius: 1em; -moz-border-radius: 1em; -webkit-border-radius: 1em; padding: 10px; position: absolute; top: 0; left: 0; }
 #as-fxb-builder * { font: 14px Helvetica,Sans-Serif; }
 #as-fxb-builder h2 { font: bold 1.5em Helvetica,Sans-Serif; cursor: move; text-align: center; background: #eee; color: #026; border-radius: .4em; -moz-border-radius: .4em; -webkit-border-radius: .4em; padding: 0; }
-#as-fxb-builder h2 span.close { cursor: pointer; float: right; width: 13px; height: 16px; display: block; margin: 6px 15px 0 0; background: transparent url(../images/buttons.png) no-repeat right top; }
+#as-fxb-builder h2 span.close { cursor: pointer; float: right; width: 13px; height: 16px; display: block; position: relative; top: 5px; right: 5px; background: transparent url(../images/buttons.png) no-repeat right top; }
+#as-fxb-builder h2 a { cursor: pointer; float: right; width: 13px; height: 16px; display: block; position: relative; top: 5px; right: 5px; background: transparent url(../images/buttons.png) no-repeat right -14px; }
 #as-fxb-builder a:link, #as-fxb-builder .asfxbuildertooltip { color: #008; cursor: pointer; }
 #as-fxb-builder a:hover, #as-fxb-builder .asfxbuildertooltip:hover { color: #888; }
 #as-fxb-builder a:visited, a:active { color: #00f; }
 #as-fxb-selections select, #as-fxb-selections input { width: 100px; margin: 0; }
-#as-fxb-selections table { border-collapse: collapse; border: #777 1px solid; margin: 0 auto; }
+#as-fxb-selections table { border-collapse: collapse; border: #777 1px solid; margin: 0 auto; width: 100%; }
 #as-fxb-selections thead th, #as-fxb-selections .examples { color: #002088; font: 18px bold; margin: 0; text-align: center; vertical-align: bottom; padding-bottom: 3px; }
 #as-fxb-selections thead { border-bottom: #777 4px solid; }
 #as-fxb-selections th.el, #as-fxb-selections th.cu, #as-fxb-selections th.fx, #as-fxb-selections th.di, #as-fxb-selections th.ti, #as-fxb-selections th.ea, #as-fxb-selections th.bu { width: 100px; }

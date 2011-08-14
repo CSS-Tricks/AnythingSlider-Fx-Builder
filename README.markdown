@@ -104,6 +104,9 @@ $('#slider').anythingSlider({
 
 ## Change Log
 
+### Version 1.0.2beta
+* Fixed a bug so the builder works with IE7 and IE8
+
 ### Version 1.0.1beta
 * Fixed an element selector bug.
 * Added a random element to the list on startup, as an example.
