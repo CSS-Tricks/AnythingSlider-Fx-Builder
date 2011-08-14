@@ -17,7 +17,7 @@ function setupFxBuilder(){
 			.attr({
 				rel : "stylesheet",
 				type: "text/css",
-				href: "http://mottie.github.com/AnythingSlider-Fx-Builder/css/fx-builder.css"
+				href: "http://mottie.github.com/AnythingSlider-Fx-Builder/css/builder.css"
 			});
 		}
 
