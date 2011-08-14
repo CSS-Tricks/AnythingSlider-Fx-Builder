@@ -1,5 +1,5 @@
 ﻿/*
- * AnythingSlider FX Builder 1.0 beta
+ * AnythingSlider FX Builder 1.0.1 beta
  * By Rob Garrison (aka Mottie & Fudgey)
  * Dual licensed under the MIT and GPL licenses.
  */
@@ -17,18 +17,19 @@ function setupFxBuilder(){
 			.attr({
 				rel : "stylesheet",
 				type: "text/css",
+				// local: "file:///C:/Temp/AnythingSlider-Fx-Builder/css/builder.css"
 				href: "http://mottie.github.com/AnythingSlider-Fx-Builder/css/builder.css"
 			});
 		}
 
-		// load easing function if needed
+		// load easing function if needed - local: "file:///C:/Temp/AnythingSlider/js/jquery.easing.1.2.js");
 		var e = typeof jQuery.easing;
 		if (e === 'undefined' || (e === 'object' && typeof jQuery.easing.easeInQuad === 'undefined')) {
 			jQuery.getScript("http://proloser.github.com/AnythingSlider/js/jquery.easing.1.2.js");
 		}
 
 		if (typeof jQuery.fn.anythingSliderFx !== 'function'){
-			// load fx extension
+			// load fx extension - local: file:///C:/Temp/AnythingSlider/js/jquery.anythingslider.fx.js
 			jQuery.getScript("http://proloser.github.com/AnythingSlider/js/jquery.anythingslider.fx.js", function(){
 				anythingSliderFxBuilder();
 			});
@@ -46,7 +47,7 @@ function anythingSliderFxBuilder(){
 
 	// defaults
 	var container, selections, sel = '', content = '', e, s, t, tag, tar, that,
-	panels, contents, dat, infinite, popup = '', s1 = '', row, ls = !!window.localStorage,
+	panels, dat, popup = '', s1 = '', row, ls = !!window.localStorage,
 	slider = jQuery('.anythingBase:first').anythingSliderFx(), orig, flag = false,
 	fxlist = ['top',  'bottom', 'left', 'right', 'fade', 'expand', 'listLR', 'listRL', 'caption-Top', 'caption-Bottom', 'caption-Left', 'caption-Right'],
 
@@ -127,7 +128,7 @@ function anythingSliderFxBuilder(){
 					'<th>' +
 						'Easing (<a class="asfxbuildertooltip" title="Easing is basically the style of the animation. It can be applied to resizing as well as movement. Click this link to see what each one does" target="_blank" href="http://jquery-ui.googlecode.com/svn/trunk/demos/effect/easing.html">?</a>)<br>' +
 						'<select id="as-fxb-easing">' +
-							'<option disabled selected>{Choose easing type}</option><option>swing (default)</option><option>linear</option>' + s1 +
+							'<option selected>swing</option><option>linear</option>' + s1 +
 						'</select>' +
 					'</th>' +
 					'<th class="fxbu">' +
@@ -223,16 +224,14 @@ function anythingSliderFxBuilder(){
 
 	// set up Element list
 	selections = jQuery('#as-fxb-selections');
-	panels = slider.children('li').filter(':not(.cloned)'); // panel class added by the plugin, but add here just in case
-	contents = panels.find('*');
+	panels = slider.children('li'); // panel class added by the plugin, but add here just in case
 	dat = slider.data('AnythingSlider');
-	infinite = dat.options.infiniteSlides;
 
-	contents.each(function(i){
+	panels.filter(':not(.cloned)').find('*').each(function(i){
 		that = jQuery(this);
 		// get panel index or class
 		tag = that.closest('.panel');
-		if (tag.attr('class') === 'panel') {
+		if (tag.is('.panel')) {
 			// get the correct index (cloned panels?)
 			t = tag.index();
 			if (t === 0) {
@@ -275,7 +274,9 @@ function anythingSliderFxBuilder(){
 	selections.find('#as-fxb-elements').append(sel);
 
 	// add demo row
-	addRow('.panel3 img.expand','',['expand'],'10%','','easeOutBounce');
+	s = jQuery('#as-fxb-elements option');
+	t = Math.floor(Math.random()*(s.length-1)) + 1;
+	addRow( s.eq(t).attr('data-sel'),'',['top'],'500','','easeOutBounce');
 
 	// add button
 	selections
@@ -332,11 +333,11 @@ function anythingSliderFxBuilder(){
 			for (i=0; i<6; i++) {
 				fx[i] = cells.eq(i).text() || '';
 			}
-			page = slider.find('.panel:not(.cloned)').find('*').andSelf().filter( (fx[0] === '' ? fx[1] : fx[0].split(' ')[0]) ).closest('.panel');
+			page = slider.find( (fx[0] === '' ? fx[1] : fx[0].split(' ')[0]) ).closest('.panel');
 			dat.fx = {}; // clear out all other FX
 			dat.fx[fx[0] + fx[1]] = [ fx[2], fx[3], fx[4], fx[5] ];
 			// set page for FX
-			dat.gotoPage(page.index() + (infinite ? 0 : 1));
+			dat.gotoPage(panels.index(page) + (dat.options.infiniteSlides ? 0 : 1));
 		}
 		return false;
 	});
