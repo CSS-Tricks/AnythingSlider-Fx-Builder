@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AnythingSlider FX Builder</title>
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link href='http://fonts.googleapis.com/css?family=Coda:800' rel='stylesheet' type='text/css'>
+
+<!-- AnythingSlider demo stylesheet (using styles for slider #2) -->
+<link href="http://proloser.github.com/AnythingSlider/demos/css/page.css" rel="stylesheet">
+<!-- FX Builder demo page -->
+<link href="css/demo.css" rel="stylesheet">
+
+<!-- required for AnythingSlider -->
+<link href="http://proloser.github.com/AnythingSlider/css/anythingslider.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://proloser.github.com/AnythingSlider/js/jquery.anythingslider.js"></script>
+
+<script>
+$(function(){
+	$('#slider2').anythingSlider({
+		resizeContents      : false,
+		navigationFormatter : function(index, panel){ // Format navigation labels with text
+			return ['Recipe', 'Quote', 'Image', 'Quote #2', 'Image #2'][index - 1];
+		}
+	});
+});
+</script>
+
+</head>
+<body>
+
+<div id="main">
+
+	<h2>AnythingSlider FX Builder</h2>
+
+	<span class="bookmarkletwrap">
+		<a class="bookmarklet" href="javascript:(function(d,s,c){if(!window.setupFxBuilder){s=d.createElement('script');s.type='text/javascript';s.src='http://mottie.github.com/AnythingSlider-Fx-Builder/js/builder-min.js';s.onload=s.onreadystatechange=function(){if(!(c=this.readyState)||c==='loaded'||c==='complete'){setupFxBuilder();}};d.getElementsByTagName('head')[0].appendChild(s);}else{setupFxBuilder();}})(document);">AnythingSlider<br>FX Builder</a>
+	</span>
+	<br>
+	<p>
+		Drag the link (bookmarklet) above into your browser bookmarks. Then use it on your AnythingSlider page to activate the builder.<br>
+		Or just click it now to test it on this page.
+	</p>
+
+	<ul id="slider2">
+		<li class="panel1">
+			<div class="textSlide">
+				<img src="http://proloser.github.com/AnythingSlider/demos/images/251356.jpg" alt="tomato sandwich" style="float: right; margin: 0 0 2px 10px;" />
+				<h3>Queenie's Killer Tomato Bagel Sandwich</h3>
+				<h4>Ingredients</h4>
+				<ul>
+					<li>1 bagel, split and toasted</li>
+					<li>2 tablespoons cream cheese</li>
+					<li>1 roma (plum) tomatoes, thinly sliced</li>
+					<li>salt and pepper to taste</li>
+					<li>4 leaves fresh basil</li>
+				</ul>
+			</div>
+		</li>
+		<li> <!-- no class added to this LI to show it will target this panel using ":eq(1)";
+			the "panel" class is added by the plugin, and this code adds it just in case -->
+			<div class="quoteSlide">
+				<blockquote>
+					In awe I watched the waxing moon ride across the zenith of the heavens like an ambered chariot towards the ebon void of
+					infinite space wherein the tethered belts of Jupiter and Mars hang forever festooned in their orbital majesty. And as I
+					looked at all this I thought... I must put a roof on this lavatory.<p>~ Les Dawson</p>
+				</blockquote>
+			</div>
+		</li>
+		<li class="panel3">
+			<img class="expand" src="http://proloser.github.com/AnythingSlider/demos/images/slide-tele-1.jpg" alt="" />
+		</li>
+		<li class="panel4">
+			<div class="quoteSlide">
+				<blockquote>
+					Life is conversational. Web design should be the same way. On the web, you&#8217;re talking to someone you&#8217;ve
+					probably never met – so it&#8217;s important to be clear and precise. Thus, well structured navigation and content
+					organization goes hand in hand with having a good conversation.
+				</blockquote>
+				<p> - <a id='perma' href='http://quotesondesign.com/chikezie-ejiasi/'>Chikezie Ejiasi</a></p>
+			</div>
+		</li>
+		<li class="panel5">
+			<img class="fade" src="http://proloser.github.com/AnythingSlider/demos/images/slide-tele-2.jpg" alt="" />
+		</li>
+	</ul>
+
+</div>
+
+</body>
+</html>

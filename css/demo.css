@@ -1,0 +1,30 @@
+﻿body {background: #fff; color: #000; width: 1175px; margin: 10px auto; }
+a:link { color: #008; }
+a:hover, a:visited, a:active { color: #00f; }
+h2 { font-family: 'Coda', sans-serif; font-size: 40px; text-align: center; padding-bottom: 10px; }
+p { font-size: 15px; text-align: center; padding-bottom: 10px; }
+.bookmarkletwrap {
+	display: block;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#0080ff), to(#004088)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #0080ff, #004088); /* Chrome 10+, Saf5.1+ */
+	background-image: -moz-linear-gradient(top, #0080ff, #004088); /* FF3.6 */
+	background-image: -ms-linear-gradient(top, #0080ff, #004088); /* IE10 */
+	background-image: -o-linear-gradient(top, #0080ff, #004088); /* Opera 11.10+ */
+	background-image: linear-gradient(top, #0080ff, #004088);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#0080ff', EndColorStr='#004088'); /* IE6–IE9 */
+	width: 180px;
+	margin: 10px;
+	padding: 10px;
+	text-align: right;
+	margin: 0 auto;
+	font-size: 18px;
+	border: #333 1px solid;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.bookmarklet, .bookmarklet:link {
+	display: block;
+	color: #fff;
+	background: url(../images/apple-touch-icon.png) left center no-repeat;
+}
