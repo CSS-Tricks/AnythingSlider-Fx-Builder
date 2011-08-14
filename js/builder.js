@@ -47,7 +47,7 @@ function anythingSliderFxBuilder(){
 	// defaults
 	var container, selections, sel = '', content = '', e, s, t, tag, tar, that,
 	panels, contents, dat, infinite, popup = '', s1 = '', row, ls = !!window.localStorage,
-	slider = jQuery('.anythingBase').anythingSliderFx(), orig, flag = false,
+	slider = jQuery('.anythingBase:first').anythingSliderFx(), orig, flag = false,
 	fxlist = ['top',  'bottom', 'left', 'right', 'fade', 'expand', 'listLR', 'listRL', 'caption-Top', 'caption-Bottom', 'caption-Left', 'caption-Right'],
 
 	// add a row (element, custom, fx, distance, time, easing)
