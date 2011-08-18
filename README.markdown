@@ -1,4 +1,5 @@
-﻿# AnythingSlider FX Builder Bookmarklet
+
+# AnythingSlider FX Builder Bookmarklet
 
 ## Features ([Demo](http://mottie.github.com/AnythingSlider-Fx-Builder/))
 * Bookmarklet that can be run on any page containing an [AnythingSlider](http://proloser.github.com/AnythingSlider)
