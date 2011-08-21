@@ -1,5 +1,5 @@
 ﻿/*
- * AnythingSlider FX Builder 1.0.2 beta
+ * AnythingSlider FX Builder 1.0.3 beta
  * By Rob Garrison (aka Mottie & Fudgey)
  * Dual licensed under the MIT and GPL licenses.
  */
@@ -48,7 +48,7 @@ function anythingSliderFxBuilder(){
 	var container, selections, sel = '', content = '', e, s, t, tag, tar, that,
 	panels, dat, popup = '', s1 = '', row, ls = !!window.localStorage,
 	slider = jQuery('.anythingBase:first').anythingSliderFx(), orig, flag = false,
-	fxlist = ['top',  'bottom', 'left', 'right', 'fade', 'expand', 'listLR', 'listRL', 'caption-Top', 'caption-Bottom', 'caption-Left', 'caption-Right'],
+	fxlist = ['top',  'bottom', 'left', 'right', 'fade', 'expand', 'grow', 'listLR', 'listRL', 'caption-Top', 'caption-Bottom', 'caption-Left', 'caption-Right'],
 
 	// add a row (element, custom, fx, distance, time, easing)
 	addRow = function(el,cu,fx,di,ti,ea){

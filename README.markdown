@@ -1,5 +1,4 @@
-
-# AnythingSlider FX Builder Bookmarklet
+﻿# AnythingSlider FX Builder Bookmarklet
 
 ## Features ([Demo](http://mottie.github.com/AnythingSlider-Fx-Builder/))
 * Bookmarklet that can be run on any page containing an [AnythingSlider](http://proloser.github.com/AnythingSlider)
@@ -21,12 +20,16 @@
 * The custom selector cell is added to the element selector without any spaces, so if you want to target the first list item, choose "LI" from the element drop down, then enter ":first" or ":eq(0)" in the custom selector. But if you choose "UL" from the element list and enter "LI" in the custom selector, the result is "ULLI" so be sure to add a space in front of the LI, like this " LI".
 
 ### FX
+
+![img](http://mottie.github.com/AnythingSlider-Fx-Builder/images/fx-samples.gif)
+
 * A selection in the FX cell is also required.
  * Choose from one or more of the FX listed in the dropdown (click inside the input to see it).
  * Choosing both `left` and `right` or `top` and `bottom` would result in the second fx in the list overriding the first. So combine fx that don't oppose each other, like `top` and `left`.
  * The `listLR` fx is intended to be used on multiple elements, like a list. The "LR" means that odd numbered elements will come in from the left and even numbered elements will come in from the right.
  * The `listRL` fx is the opposite of the `listLR` effect.
- * The `expand` fx is meant to be used on a panel that contains only one image. Try using it on an image that has text surrounding it and the image will expand to fill the panel.
+ * The `expand` fx is meant to be used on a panel that contains only one image. In the latest update, you can set the final size (the size of the image without the fx applied) of the image (but it needs to be as a percentage). Follow this format: `'10%, 80%'` ('fx size, final size').
+ * The `grow` fx is similar to the `expand` fx except it applies to the font. Just add the font size of the text's final size (e.g. `'24px'`). If you want to set the grown size (it's `80px` by default), add a comma and then add the larger/smaller font size, like this: `'24px, 80px'` (this is opposite of the way `expand` sets the sizes).
  * To use any of the four `caption` fx, the following CSS needs to be included before they will work properly. The css is included with the bookmarklet, but the appropriate css will also need to be included in the final slider - modify the css in any way you wish:
 
     ```css
@@ -105,8 +108,12 @@ $('#slider').anythingSlider({
 
 ## Change Log
 
+### Version 1.0.3beta
+* Added new `grow` fx to the list.
+* Added an image to the readme to better illustrate the fx functions.
+
 ### Version 1.0.2beta
-* Fixed a bug so the builder works with IE7 and IE8
+* Fixed a bug so the builder works with IE7 and IE8.
 
 ### Version 1.0.1beta
 * Fixed an element selector bug.
