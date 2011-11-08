@@ -108,6 +108,10 @@ $('#slider').anythingSlider({
 
 ## Change Log
 
+### Version 1.0
+* Practice what you preach... set the image dimensions in the main demo\
+* I guess it's been out there long enough without any problems to take it out of beta :)
+
 ### Version 1.0.3beta
 * Added new `grow` fx to the list.
 * Added an image to the readme to better illustrate the fx functions.
