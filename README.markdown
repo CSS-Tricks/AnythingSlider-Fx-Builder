@@ -1,6 +1,6 @@
 ﻿# AnythingSlider FX Builder Bookmarklet
 
-## Features ([Demo](http://mottie.github.com/AnythingSlider-Fx-Builder/))
+## Features ([Demo](http://css-tricks.github.com/AnythingSlider-Fx-Builder/))
 * Bookmarklet that can be run on any page containing an [AnythingSlider](http://proloser.github.com/AnythingSlider)
 * This builder allows you to add and test any of the available built-in effects (Fx) from the [AnythingSlider Fx extension](http://proloser.github.com/AnythingSlider/demos.html).
 * No coding knowledge is needed, although some knowledge of [jQuery selectors](http://api.jquery.com/category/selectors/) would be extremely helpful.
@@ -21,7 +21,7 @@
 
 ### FX
 
-![img](http://mottie.github.com/AnythingSlider-Fx-Builder/images/fx-samples.gif)
+![img](http://css-tricks.github.com/AnythingSlider-Fx-Builder/images/fx-samples.gif)
 
 * A selection in the FX cell is also required.
  * Choose from one or more of the FX listed in the dropdown (click inside the input to see it).

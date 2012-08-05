@@ -1,5 +1,5 @@
 ﻿/*
- * AnythingSlider FX Builder 1.0.3 beta
+ * AnythingSlider FX Builder 1.0
  * By Rob Garrison (aka Mottie & Fudgey)
  * Dual licensed under the MIT and GPL licenses.
  */
@@ -17,7 +17,7 @@ function setupFxBuilder(){
 			.attr({
 				rel : "stylesheet",
 				type: "text/css",
-				href: "http://mottie.github.com/AnythingSlider-Fx-Builder/css/builder.css"
+				href: "http://css-tricks.github.com/AnythingSlider-Fx-Builder/css/builder.css"
 			});
 		}
 
@@ -98,7 +98,7 @@ function anythingSliderFxBuilder(){
 	'<h2>' +
 		'AnythingSlider FX Builder ' +
 		'<span class="close"></span>' +
-		'<a class="asfxbuildertooltip" target="_blank" title="Need Help? Click me!" href="https://github.com/Mottie/AnythingSlider-Fx-Builder"></a>' +
+		'<a class="asfxbuildertooltip" target="_blank" title="Need Help? Click me!" href="https://github.com/CSS-Tricks/AnythingSlider-Fx-Builder"></a>' +
 	'</h2>' +
 	'<div id="as-fxb-selections">' +
 		'<table>' +
