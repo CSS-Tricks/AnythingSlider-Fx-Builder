@@ -1,8 +1,8 @@
 ﻿# AnythingSlider FX Builder Bookmarklet
 
 ## Features ([Demo](http://css-tricks.github.com/AnythingSlider-Fx-Builder/))
-* Bookmarklet that can be run on any page containing an [AnythingSlider](http://proloser.github.com/AnythingSlider)
-* This builder allows you to add and test any of the available built-in effects (Fx) from the [AnythingSlider Fx extension](http://proloser.github.com/AnythingSlider/demos.html).
+* Bookmarklet that can be run on any page containing an [AnythingSlider](http://css-tricks.github.com/AnythingSlider)
+* This builder allows you to add and test any of the available built-in effects (Fx) from the [AnythingSlider Fx extension](http://css-tricks.github.com/AnythingSlider/demos.html).
 * No coding knowledge is needed, although some knowledge of [jQuery selectors](http://api.jquery.com/category/selectors/) would be extremely helpful.
 * Play a single fx or all of them with one button.
 * When done building the list of fx, click the fx code button that you can copy then paste directly into the slider fx initialization code.
@@ -49,7 +49,7 @@
 .caption-left { left: 0; bottom: 0; width: 130px; height: 180px;  }
  ```
 
- * Please look at the required HTML needed to set up the captions as well on [this page](http://proloser.github.com/AnythingSlider/demos.html) at the bottom.
+ * Please look at the required HTML needed to set up the captions as well on [this page](http://css-tricks.github.com/AnythingSlider/demos.html) at the bottom.
 
 ### Distance/Size
 * Enter a distance you want the element to move.
@@ -107,6 +107,10 @@ $('#slider').anythingSlider({
 ```
 
 ## Change Log
+
+### Version 1.0.1
+* Updated links to point to the repo's new location on CSS-Tricks
+* Updated demo to use CSS-Tricks' version of AnythingSlider
 
 ### Version 1.0
 * Practice what you preach... set the image dimensions in the main demo\

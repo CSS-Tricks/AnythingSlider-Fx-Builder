@@ -1,5 +1,5 @@
 ﻿/*
- * AnythingSlider FX Builder 1.0
+ * AnythingSlider FX Builder 1.0.1
  * By Rob Garrison (aka Mottie & Fudgey)
  * Dual licensed under the MIT and GPL licenses.
  */
@@ -24,12 +24,12 @@ function setupFxBuilder(){
 		// load easing function if needed
 		var e = typeof jQuery.easing;
 		if (e === 'undefined' || (e === 'object' && typeof jQuery.easing.easeInQuad === 'undefined')) {
-			jQuery.getScript("http://proloser.github.com/AnythingSlider/js/jquery.easing.1.2.js");
+			jQuery.getScript("http://css-tricks.github.com/AnythingSlider/js/jquery.easing.1.2.js");
 		}
 
 		if (typeof jQuery.fn.anythingSliderFx !== 'function'){
 			// load fx extension
-			jQuery.getScript("http://proloser.github.com/AnythingSlider/js/jquery.anythingslider.fx.js", function(){
+			jQuery.getScript("http://css-tricks.github.com/AnythingSlider/js/jquery.anythingslider.fx.js", function(){
 				anythingSliderFxBuilder();
 			});
 		} else {
